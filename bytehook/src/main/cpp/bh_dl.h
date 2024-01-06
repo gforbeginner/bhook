@@ -23,6 +23,16 @@
 
 #pragma once
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 void *bh_dl_open_linker(void);
+
 void bh_dl_close(void *handle);
+
 void *bh_dl_dsym(void *handle, const char *symbol);
+
+#ifdef __cplusplus
+}
+#endif
